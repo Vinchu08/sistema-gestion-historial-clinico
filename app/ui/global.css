@@ -16,3 +16,60 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* styles/globals.css */
+
+.container {
+  display: flex;
+}
+
+.left-sidebar {
+  width: 250px;
+  background-color: #333;
+  padding: 10px;
+}
+
+.person-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+
+.person-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.person-name {
+  font-size: 16px;
+}
+
+.right-sidebar {
+  width: 100%;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.right-sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right-sidebar li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}

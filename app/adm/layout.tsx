@@ -1,5 +1,5 @@
 import '../ui/global.css'
-import SideNav from '../ui/dashboard/sidenav';
+import Header from '../ui/header';
 
 export default function PagesLayout({
   children,
@@ -7,11 +7,13 @@ export default function PagesLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
-        <div className="w-full flex-none md:w-64">
-            <SideNav />
-        </div>
-        <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+    <div className="flex flex-col h-screen">
+      <header>
+        <Header />
+      </header>
+      <div className='flex-1 overflow-hidden'>
+        {children}
+      </div>
     </div>
   );
 }

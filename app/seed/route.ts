@@ -8,7 +8,7 @@ const client = await db.connect();
 // Crear la tabla 'doctor'
 async function seedDoctors() {
     await client.sql`
-      CREATE TABLE IF NOT EXISTS doctor (
+      CREATE TABLE IF NOT EXISTS doctors (
         id_doctor SERIAL PRIMARY KEY,
         firstname VARCHAR(100) NOT NULL,
         pat_surname VARCHAR(30),
@@ -38,7 +38,7 @@ async function seedDoctors() {
   // Crear la tabla 'patient'
   async function seedPatients() {
     await client.sql`
-      CREATE TABLE IF NOT EXISTS patient (
+      CREATE TABLE IF NOT EXISTS patients (
         id_patient SERIAL PRIMARY KEY,
         firstname VARCHAR(100) NOT NULL,
         pat_surname VARCHAR(30),
@@ -66,7 +66,7 @@ async function seedDoctors() {
   // Crear la tabla 'meeting'
   async function seedMeetings() {
     await client.sql`
-      CREATE TABLE IF NOT EXISTS meeting (
+      CREATE TABLE IF NOT EXISTS meetings (
         id_meeting SERIAL PRIMARY KEY,
         id_doctor INT REFERENCES doctor(id_doctor),
         id_patient INT REFERENCES patient(id_patient),
@@ -101,10 +101,6 @@ async function seedDoctors() {
   
   // Función para inicializar las tablas y poblar con datos de ejemplo
   export async function GET() {
-    return Response.json({
-      message:
-        'Uncomment this file and remove this line. You can delete this file when you are finished.',
-    });
     try {
       await client.sql`BEGIN`;
       await seedDoctors();
