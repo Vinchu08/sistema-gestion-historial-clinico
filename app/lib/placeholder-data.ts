@@ -6,6 +6,7 @@ const doctors = [
       address: "Calle Falsa 123, Ciudad",
       phone: "1234567890",
       email: "juan.perez@example.com",
+      image_url: "http://localhost:3000/public/patients/chico1.png",
       username: "juanperez",
       password: "password123", // La contraseña se debe cifrar antes de insertar en la base de datos
     },
@@ -16,6 +17,7 @@ const doctors = [
       address: "Avenida Siempre Viva 742, Ciudad",
       phone: "0987654321",
       email: "maria.gonzalez@example.com",
+      image_url: "http://localhost:3000/public/patients/chica1.png",
       username: "mariagonzalez",
       password: "securepass456",
     },
@@ -30,6 +32,7 @@ const doctors = [
       phone: "2345678901",
       ref_phone: "3456789012",
       email: "carlos.ramirez@example.com",
+      image_url: "http://localhost:3000/public/patients/chico2.png"
     },
     {
       firstname: "Ana",
@@ -39,6 +42,7 @@ const doctors = [
       phone: "4567890123",
       ref_phone: "5678901234",
       email: "ana.sanchez@example.com",
+      image_url: "http://localhost:3000/public/patients/chica2.png"
     },
   ];
   
